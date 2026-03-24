@@ -1,0 +1,181 @@
+%-------------------------
+% Resume in Latex
+% Author : Choudarypalli Rithika
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\setlength{\footskip}{4.08003pt}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins - Tighter for single page
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{blue(pigment)}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\definecolor{bleudefrance}{rgb}{0.19, 0.55, 0.91}
+\definecolor{blue(pigment)}{rgb}{0.2, 0.2, 0.6}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape \textcolor{blue(pigment)}{Choudarypalli Rithika}} \\ \vspace{3pt}
+    \small Roll No: 21BD1A6715 \\ \vspace{5pt}
+    \small +91-8897436282 $|$ \href{mailto:crithika999@gmail.com}{\underline{crithika999@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/rithika-choudarypalli/}{\underline{Linkedin}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{\textcolor{blue(pigment)}{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Keshav Memorial Institute of Technology, affiliated to JNTUH}{8.54/10}
+      {B.Tech in Computer Science Engineering (Data Science)}{Dec. 2021 -- Aug. 2025}
+    \resumeSubheading
+      {Narayana Junior College}{97.0\%}
+      {Intermediate}{2019 -- 2021}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{\textcolor{blue(pigment)}{Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {ML Engineer Intern}{Risposta}
+      {Hyderabad}{Sept. 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Built and deployed RAG pipelines using LangGraph and FastAPI, enabling context-aware document retrieval across large-scale collections with sub-second query latency.}
+        \resumeItem{Developed agentic workflows with specialized tools for query reformulation, retrieval, and response synthesis, improving answer relevance by ~30\%.}
+        \resumeItem{Integrated BigQuery as a scalable vector store for semantic search over embedded documents, supporting 10K+ indexed entries.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{\textcolor{blue(pigment)}{Projects}}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Medical Transcription Using Speech Recognition} $|$ \emph{Python, SpeechRecognition, ML}}{Aug. 2024 -- Nov. 2024}
+      \resumeItemListStart
+        \resumeItem{Developed an end-to-end speech-to-text pipeline for medical transcription, converting audio recordings into structured clinical notes using Python and SpeechRecognition.}
+        \resumeItem{Applied ML-based post-processing to normalize medical terminology and improve transcription accuracy across multiple clinical specialties.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Multi Organ Segmenter} $|$ \emph{CNN, UNet, TensorFlow, Keras}}{Dec. 2024 -- Feb. 2025}
+      \resumeItemListStart
+        \resumeItem{Engineered a CNN/UNet-based segmentation model for automated multi-organ delineation from CT and MRI scans using TensorFlow and Keras.}
+        \resumeItem{Trained on medical imaging datasets with data augmentation, achieving reliable organ boundary segmentation for clinical analysis workflows.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Personalized News Aggregation \& Voice Assistant} $|$ \emph{FastAPI, LangGraph, BigQuery, RAG}}{Jan. 2025 -- Mar. 2025}
+      \resumeItemListStart
+        \resumeItem{Built a retrieval-augmented conversational agent for personalized information retrieval across large document collections using a RAG pipeline with BigQuery vector search.}
+        \resumeItem{Orchestrated multi-step agent workflows via LangGraph with specialized tools for retrieval, query reformulation, and response synthesis, adapting dynamically to user intent.}
+        \resumeItem{Extended into a voice-enabled assistant platform using user preferences and interaction history to guide retrieval and ranking of curated news updates.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{\textcolor{blue(pigment)}{Technical Skills}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Java, SQL} \\
+     \textbf{Frameworks \& Tools}{: FastAPI, LangGraph, TensorFlow, Keras, BigQuery, Git} \\
+     \textbf{Libraries}{: SpeechRecognition, NumPy, Pandas, OpenCV} \\
+     \textbf{Concepts}{: RAG, Agentic AI, Machine Learning, Deep Learning, NLP, Computer Vision}
+    }}
+ \end{itemize}
+
+%-----------Certifications-----------
+\section{\textcolor{blue(pigment)}{Certifications}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Deloitte}: Data Analytics Job Simulation \\
+     \textbf{Scaler Topics}: Python Certification \\
+     \textbf{Simplilearn}: Introduction to Data Analytics
+    }}
+ \end{itemize}
+
+\end{document}

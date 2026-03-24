@@ -1,0 +1,197 @@
+%-------------------------
+% Resume in Latex
+% Author : Kanaparthy Sai Sreekar
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\setlength{\footskip}{4.08003pt}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins - Tighter for single page
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{blue(pigment)}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\definecolor{bleudefrance}{rgb}{0.19, 0.55, 0.91}
+\definecolor{blue(pigment)}{rgb}{0.2, 0.2, 0.6}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape \textcolor{blue(pigment)}{Kanaparthy Sai Sreekar}} \\ \vspace{5pt}
+    \small +91-9440445709 $|$ \href{mailto:kanapasai@gmail.com}{\underline{kanapasai@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/saisreekarkanaparthy/}{\underline{Linkedin}} $|$
+    \href{https://github.com/KanaparthySaiSreekar}{\underline{Github}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{\textcolor{blue(pigment)}{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Keshav Memorial Institute of Technology, Hyderabad}{8.0/10}
+      {Bachelors in Computer Science Engineering (AI/ML)}{Dec. 2021 -- Aug. 2025}
+      \resumeItemListStart
+        \resumeItem{\textbf{Courses:} Java, Python, ML, DL, Computer Vision, NLP, GenAI, DSA}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Amazon ML Summer School 2024}{}
+      {Virtual}{July. 2024}
+      \resumeItemListStart
+       \resumeItem{Immersive learning in Supervised/Unsupervised Learning, DNNs, GenAI, LLMs, and Causal Inference.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{\textcolor{blue(pigment)}{Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Product Engineer}{AidenAI}
+      {Hyderabad, Telangana, India · On-site}{Aug. 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Leading an 8-member team to build an agentic AI hiring system (MCP + AutoGen), optimizing LLM cost-performance to cut inference costs by 20\% while maintaining accuracy.}
+      \resumeItemListEnd
+    
+    \resumeSubheading
+      {Product Engineer Intern}{AidenAI}
+      {Hyderabad, Telangana, India · On-site}{Feb. 2025 -- Aug. 2025}
+      \resumeItemListStart
+        \resumeItem{Led a 13-member team to deliver a scalable job-matching platform, reducing API latency by 40\% via asynchronous FastAPI microservices.}
+        \resumeItem{Deployed LLaMA 8B via Ollama/VLLM; integrated AutoGen agents to auto-apply for jobs, improving match rate by 25\%.}
+        \resumeItem{Implemented fine-grained access control with Casbin, reducing security review cycles by 30\%.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Full-stack Intern}{Procareer Academy}
+      {Los Angeles, California, United States · Remote}{Mar. 2022 -- Aug. 2023}
+      \resumeItemListStart
+        \resumeItem{Built a full-stack platform for coursework delivery and automated assessment, improving grading efficiency by 35\%.}
+        \resumeItem{Developed role-based dashboards and integrated secure authentication for 500+ active users.}
+        \resumeItem{Optimized database queries and frontend workflows, reducing average page load time by 25\%.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{\textcolor{blue(pigment)}{Technical Skills}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C++, Java, JavaScript, SQL, HTML, CSS} \\
+     \textbf{Frameworks/Tools}{: Flask, FastAPI, Streamlit, Node.js, Docker, AWS, Ollama, VLLM, AutoGen, MCP} \\
+     \textbf{Libraries}{: PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, OpenCV, Transformers, BeautifulSoup} \\
+     \textbf{Databases}{: MySQL, MongoDB} \\
+     \textbf{Concepts}{: REST APIs, Microservices, Agentic AI, Web Scraping, DSA}
+    }}
+ \end{itemize}
+
+%-----------PROJECTS-----------
+\section{\textcolor{blue(pigment)}{Projects}}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Fake News Detection} $|$ \emph{Selenium, Streamlit, Flask, Transformers, BERT}}{Jan. 2024 -- Apr. 2024}
+      \resumeItemListStart
+        \resumeItem{Built a detection platform using Selenium/BeautifulSoup for data scraping and Google News API for enrichment.}
+        \resumeItem{Implemented Random Forest, Naive Bayes, and BERT for classification, clickbait detection, and similarity assessment.}
+        \resumeItem{Leveraged Transformers for Named Entity Recognition (NER) and subjectivity analysis to enhance context.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Agentic Stock Analysis Framework} $|$ \emph{Python, Autogen, yfinance}}{Jul. 2024 -- Sep. 2024}
+      \resumeItemListStart
+        \resumeItem{Developed an agentic framework evaluating financial metrics to generate dynamic buy/sell/hold signals.}
+        \resumeItem{Integrated real-time data pipelines and ML-based evaluation strategies for robust signal generation.}
+        \resumeItem{Designed a modular architecture for flexible metric inclusion and validated against historical benchmarks.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------Certifications-----------
+\section{\textcolor{blue(pigment)}{Certifications}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{MathWorks}: Deep Learning Onramp, Machine Learning Onramp \\
+     \textbf{Coursera}: Neural Networks and Deep Learning
+    }}
+ \end{itemize}
+
+\end{document}
