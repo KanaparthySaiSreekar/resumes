@@ -21,9 +21,11 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+% glyphtounicode is pdfTeX-only; guard so the file also builds under XeTeX (Tectonic)
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+\fi
 \usepackage[dvipsnames]{xcolor}
-\usepackage{hyperref}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -49,8 +51,10 @@
   \vspace{-8pt}\scshape\raggedright\large
 }{}{0em}{}[\color{blue(pigment)}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+% Ensure that generate pdf is machine readable/ATS parsable (pdfTeX only)
+\ifdefined\pdfgentounicode
+  \pdfgentounicode=1
+\fi
 
 %-------------------------
 % Custom commands
@@ -107,6 +111,20 @@
     \href{https://github.com/KanaparthySaiSreekar}{\underline{Github}}
 \end{center}
 
+%-----------EXPERIENCE-----------
+\section{\textcolor{blue(pigment)}{Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Product Engineer}{AidenAI}
+      {Hyderabad, Telangana, India $\cdot$ On-site}{Feb. 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Leading an 8-member team to build an agentic AI hiring system (MCP + AutoGen), optimizing LLM cost-performance to cut inference costs by 20\% while maintaining accuracy.}
+        \resumeItem{Led a 13-member team to deliver a scalable job-matching platform, reducing API latency by 40\% via asynchronous FastAPI microservices.}
+        \resumeItem{Deployed LLaMA 8B via Ollama/VLLM; integrated AutoGen agents to auto-apply for jobs, improving match rate by 25\%.}
+        \resumeItem{Implemented fine-grained access control with Casbin, reducing security review cycles by 30\%.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
 %-----------EDUCATION-----------
 \section{\textcolor{blue(pigment)}{Education}}
   \resumeSubHeadingListStart
@@ -123,47 +141,6 @@
        \resumeItem{Immersive learning in Supervised/Unsupervised Learning, DNNs, GenAI, LLMs, and Causal Inference.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
-
-%-----------EXPERIENCE-----------
-\section{\textcolor{blue(pigment)}{Experience}}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Product Engineer}{AidenAI}
-      {Hyderabad, Telangana, India · On-site}{Aug. 2025 -- Present}
-      \resumeItemListStart
-        \resumeItem{Leading an 8-member team to build an agentic AI hiring system (MCP + AutoGen), optimizing LLM cost-performance to cut inference costs by 20\% while maintaining accuracy.}
-      \resumeItemListEnd
-    
-    \resumeSubheading
-      {Product Engineer Intern}{AidenAI}
-      {Hyderabad, Telangana, India · On-site}{Feb. 2025 -- Aug. 2025}
-      \resumeItemListStart
-        \resumeItem{Led a 13-member team to deliver a scalable job-matching platform, reducing API latency by 40\% via asynchronous FastAPI microservices.}
-        \resumeItem{Deployed LLaMA 8B via Ollama/VLLM; integrated AutoGen agents to auto-apply for jobs, improving match rate by 25\%.}
-        \resumeItem{Implemented fine-grained access control with Casbin, reducing security review cycles by 30\%.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Full-stack Intern}{Procareer Academy}
-      {Los Angeles, California, United States · Remote}{Mar. 2022 -- Aug. 2023}
-      \resumeItemListStart
-        \resumeItem{Built a full-stack platform for coursework delivery and automated assessment, improving grading efficiency by 35\%.}
-        \resumeItem{Developed role-based dashboards and integrated secure authentication for 500+ active users.}
-        \resumeItem{Optimized database queries and frontend workflows, reducing average page load time by 25\%.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-%-----------TECHNICAL SKILLS-----------
-\section{\textcolor{blue(pigment)}{Technical Skills}}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python, C++, Java, JavaScript, SQL, HTML, CSS} \\
-     \textbf{Frameworks/Tools}{: Flask, FastAPI, Streamlit, Node.js, Docker, AWS, Ollama, VLLM, AutoGen, MCP} \\
-     \textbf{Libraries}{: PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, OpenCV, Transformers, BeautifulSoup} \\
-     \textbf{Databases}{: MySQL, MongoDB} \\
-     \textbf{Concepts}{: REST APIs, Microservices, Agentic AI, Web Scraping, DSA}
-    }}
- \end{itemize}
 
 %-----------PROJECTS-----------
 \section{\textcolor{blue(pigment)}{Projects}}
@@ -184,6 +161,18 @@
         \resumeItem{Designed a modular architecture for flexible metric inclusion and validated against historical benchmarks.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{\textcolor{blue(pigment)}{Technical Skills}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C++, Java, JavaScript, SQL, HTML, CSS} \\
+     \textbf{Frameworks/Tools}{: Flask, FastAPI, Streamlit, Node.js, Docker, AWS, Ollama, VLLM, AutoGen, MCP} \\
+     \textbf{Libraries}{: PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, OpenCV, Transformers, BeautifulSoup} \\
+     \textbf{Databases}{: MySQL, MongoDB} \\
+     \textbf{Concepts}{: REST APIs, Microservices, Agentic AI, Web Scraping, DSA}
+    }}
+ \end{itemize}
 
 %-----------Certifications-----------
 \section{\textcolor{blue(pigment)}{Certifications}}

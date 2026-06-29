@@ -36,7 +36,30 @@ Resume/
 
 ## How to Compile
 
-From within the version's directory:
+### Recommended: Tectonic (used for local builds)
+
+Tectonic is a single self-contained engine that downloads TeX packages on demand —
+no full TeX Live/MiKTeX install needed. From the repo root:
+
+```powershell
+.\build.ps1 v2_single_page
+```
+
+`build.ps1` finds `tectonic` on PATH, or falls back to `%USERPROFILE%\Tools\Tectonic\tectonic.exe`.
+You can also call the engine directly:
+
+```powershell
+tectonic --keep-logs resumes/v2_single_page/v2_single_page.tex
+```
+
+Tectonic runs the **XeTeX** engine, so the `.tex` files are written to be engine-agnostic:
+- pdfTeX-only commands (`\input{glyphtounicode}`, `\pdfgentounicode=1`) are wrapped in
+  `\ifdefined\pdfgentounicode ... \fi` so they only run under pdfTeX (ATS glyph mapping)
+  and are skipped under XeTeX.
+- Use `$\cdot$` for the middle-dot separator, not a literal `·` byte (which mis-renders
+  under XeTeX).
+
+### Alternative: pdflatex (TeX Live / MiKTeX)
 
 ```bash
 cd resumes/v1
