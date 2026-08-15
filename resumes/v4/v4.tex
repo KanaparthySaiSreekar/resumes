@@ -1,0 +1,228 @@
+%-------------------------
+% Resume in Latex
+% Author : Kanaparthy Sai Sreekar
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+% \documentclass{article}
+\usepackage{lmodern}
+\setlength{\footskip}{4.08003pt}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{iftex}
+\ifPDFTeX
+  \input{glyphtounicode}
+\fi
+\usepackage[dvipsnames]{xcolor}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{blue(pigment)}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifPDFTeX
+  \pdfgentounicode=1
+\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\definecolor{bleudefrance}{rgb}{0.19, 0.55, 0.91}
+\definecolor{blue(pigment)}{rgb}{0.2, 0.2, 0.6}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape \textcolor{blue(pigment)}{Kanaparthy Sai Sreekar}} \\ \vspace{7pt}
+    \small +91-9440445709 $|$ \href{mailto:kanapasai@gmail.com}{\underline{kanapasai@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/saisreekarkanaparthy/}{\underline{Linkedin}} $|$
+    \href{https://github.com/KanaparthySaiSreekar}{\underline{Github}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{\textcolor{blue(pigment)}{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Keshav Memorial Institute of Technology, Hyderabad}{8.0/10}
+      {Bachelors in Computer Science Engineering (AI/ML)}{Dec. 2021 -- Aug. 2025}
+      \resumeItemListStart
+        \resumeItem{\textbf{Courses:} Java, Python, Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Generative AI, Data Structures and Algorithms}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Amazon ML Summer School 2024}{}
+      {Virtual}{July. 2024}
+      \resumeItemListStart
+       \resumeItem{ Completed an immersive learning experience covering key machine learning topics, including Supervised Learning,
+     Deep Neural Networks, Dimensionality Reduction, Unsupervised Learning, Sequential Learning, Reinforcement
+     Learning, Generative AI and LLMs, and Causal Inference}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+
+% %-----------PUBLICATIONS-----------
+% \section{\textcolor{blue(pigment)}{Publications}}
+%   \resumeSubHeadingListStart
+%     \resumeProjectHeading
+%       {\textbf{[Your Publication Title]} $|$ \emph{[Conference/Journal Name]}}{[Year]}
+%       \resumeItemListStart
+%         \resumeItem{[Description of your publication, key contributions, and findings. Include links if available.]}
+%       \resumeItemListEnd
+%   \resumeSubHeadingListEnd
+%   % If you have no publications, you can remove this section by commenting it out or deleting it.
+
+%-----------EXPERIENCE-----------
+\section{\textcolor{blue(pigment)}{Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Product Engineer}{AidenAI}
+      {Hyderabad, Telangana, India · On-site}{Feb. 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Spearheading development of TASC, an agentic AI hiring system built on MCP and AutoGen, leading an 8-member engineering team; optimized LLM cost-performance trade-offs to reduce inference costs by 20\% without sacrificing accuracy.}
+        \resumeItem{Architected and delivered LaunchBae, a scalable job-matching platform, leading a 13-member cross-functional team (10 backend, 3 frontend); migrated from a synchronous monolith to asynchronous FastAPI microservices, reducing API latency by 40\%.}
+        \resumeItem{Deployed LLaMA 8B on-premise via Ollama and VLLM for local inference; integrated AutoGen agents to automate job applications, improving match-to-application conversion rate by 25\%.}
+        \resumeItem{Implemented fine-grained, policy-based access control using Casbin across all microservices, streamlining authorization management and reducing security review cycles by 30\%.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Full-stack Intern}{Procareer Academy}
+      {Los Angeles, California, United States · Remote}{Mar. 2022 -- Aug. 2023}
+      \resumeItemListStart
+        \resumeItem{Built a full-stack ed-tech platform for coursework delivery and automated assessment evaluation, improving grading turnaround by 35\% for 500+ active users.}
+        \resumeItem{Developed role-based dashboards with secure authentication for instructors and students, enabling real-time progress tracking and personalized feedback.}
+        \resumeItem{Optimized database queries and frontend rendering workflows, reducing average page load time by 25\%.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{\textcolor{blue(pigment)}{Technical Skills}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C++, Java, JavaScript, SQL, HTML, CSS} \\
+     \textbf{Frameworks \& Tools}{: Flask, FastAPI, Streamlit, Node.js, Git, Docker, AWS, Ollama, VLLM, Casbin, AutoGen, MCP, VS Code, Jupyter Notebook} \\
+     \textbf{Libraries}{: PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, OpenCV, Transformers, BeautifulSoup} \\
+     \textbf{Databases}{: MySQL, MongoDB} \\
+     \textbf{Other Skills}{: REST APIs, Microservices Architecture, Agentic AI Systems, Web Scraping (Selenium, Google News API), Data Structures \& Algorithms}
+    }}
+ \end{itemize}
+
+
+%-----------PROJECTS-----------
+\section{\textcolor{blue(pigment)}{Projects}}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Fake News Detection} $|$ \emph{Selenium, Streamlit, Flask, Transformers, BERT}}{Jan. 2024 -- Apr. 2024}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented a comprehensive fake news detection platform by integrating automated data scraping via Selenium, BeautifulSoup, and the Google News API to build enriched datasets from diverse sources.}
+        \resumeItem{Applied Random Forest for news title classification and Naive Bayes for clickbait detection, enabling robust multi-layered detection.}
+        \resumeItem{Leveraged Transformers for Named Entity Recognition (NER) of names and places, and for subjectivity analysis, enhancing context understanding.}
+        \resumeItem{Deployed BERT for news similarity assessment and integrated an NER pipeline for improved accuracy in fake news detection, boosting system reliability.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Agentic Stock Analysis Framework} $|$ \emph{Python, Autogen, yfinance}}{Jul. 2024 -- Sep. 2024}
+      \resumeItemListStart
+        \resumeItem{Built an agentic stock analysis framework capable of evaluating multiple financial metrics for a given ticker to generate buy/sell/hold signals dynamically.}
+        \resumeItem{Integrated real-time stock market data pipelines and applied statistical and ML-based evaluation strategies to improve signal robustness.}
+        \resumeItem{Engineered a modular architecture allowing flexible metric inclusion, enabling extension to new indicators without re-engineering the system.}
+        \resumeItem{Validated framework outputs against historical performance benchmarks, demonstrating consistent and data-driven signal reliability.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------Certifications-----------
+\section{\textcolor{blue(pigment)}{Certifications}}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Deep Learning Onramp} $|$ \emph{MathWorks}}{October 2024}
+      \resumeItemListStart
+        \resumeItem{Successfully completed 100\% of the self-paced training course focused on the fundamentals of deep learning, neural networks, and practical implementation workflows using MATLAB.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Machine Learning Onramp} $|$ \emph{MathWorks}}{July 2024}
+      \resumeItemListStart
+        \resumeItem{Completed 100\% of the self-paced course covering supervised and unsupervised learning, model evaluation, and practical applications of machine learning with MATLAB.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Neural Networks and Deep Learning} $|$ \emph{Coursera}}{May 2020}
+      \resumeItemListStart
+        \resumeItem{24-hour certified course providing foundational knowledge of deep learning, backpropagation, and neural network architectures. Verified by Coursera.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+\end{document}

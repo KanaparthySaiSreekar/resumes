@@ -15,9 +15,12 @@ Resume/
     ├── v2_single_page/
     │   ├── v2_single_page.tex        # Condensed single-page resume
     │   └── v2_single_page.pdf        # Compiled output
-    └── v3_rithika/
-        ├── v3_rithika.tex            # Rithika's single-page resume
-        └── v3_rithika.pdf            # Compiled output
+    ├── v3_rithika/
+    │   ├── v3_rithika.tex            # Rithika's single-page resume
+    │   └── v3_rithika.pdf            # Compiled output
+    └── v4/
+        ├── v4.tex                    # Latest multi-page resume (merged AidenAI roles)
+        └── v4.pdf                    # Compiled output
 ```
 
 ## Resume Versions
@@ -25,6 +28,7 @@ Resume/
 - **v1** — Full multi-page resume with detailed descriptions for education, experience, projects, and certifications. Uses standard margins.
 - **v2_single_page** — Condensed single-page version with tighter margins, shorter bullet points, and compact certifications section. Suited for applications with strict page limits.
 - **v3_rithika** — Single-page resume for Choudarypalli Rithika (B.Tech CSE Data Science, KMIT). Uses single-page layout settings.
+- **v4** — Latest multi-page resume for Sreekar. Merges AidenAI intern (probation) and full-time into a single "Product Engineer" entry. Refined experience bullets and condensed Procareer Academy. Compatible with both pdflatex and tectonic.
 
 ## How to Create a New Version
 
